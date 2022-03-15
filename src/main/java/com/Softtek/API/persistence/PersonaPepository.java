@@ -1,5 +1,4 @@
 package com.Softtek.API.persistence;
-
 import com.Softtek.API.domain.dto.Person;
 import com.Softtek.API.domain.repository.PersonRepository;
 import com.Softtek.API.persistence.crud.CrudPersonRepository;
@@ -7,7 +6,6 @@ import com.Softtek.API.persistence.entity.Persona;
 import com.Softtek.API.persistence.mapper.PersonaMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -30,12 +28,7 @@ public class PersonaPepository implements PersonRepository {
     public Optional<Person> getPersonById(int personId) {
         return  crudPersonRepository.findById(personId).map(persona -> personaMapper.toPerson(persona));
     }
-/*
-    @Override
-    public Optional<Person> registerPerson(Person person) {
-        return Optional.empty();
-    }
- */
+
     @Override
     public Person savePerson(Person person) {
         Persona persona= personaMapper.toPersona(person);

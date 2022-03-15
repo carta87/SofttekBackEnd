@@ -1,13 +1,22 @@
 package com.Softtek.API.domain.dto;
 
-import javax.persistence.Column;
-
 public class Person {
     private Integer id;
     private String name;
     private String lastName;
     private Integer dni;
     private Boolean employee;
+
+    public Person(){
+    }
+
+    public Person(Integer id, String name, String lastName, Integer dni, Boolean employee) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.dni = dni;
+        this.employee = employee;
+    }
 
     public Integer getId() {
         return id;

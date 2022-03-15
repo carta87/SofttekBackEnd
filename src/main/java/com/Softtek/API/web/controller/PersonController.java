@@ -17,10 +17,6 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @GetMapping("/saludar")
-    private String Prueba(){
-        return "hola proyecto";
-    }
 
     @GetMapping("/todos")
     private ResponseEntity<List<Person>> getAll(){
@@ -47,6 +43,4 @@ public class PersonController {
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
     }
-
-
 }

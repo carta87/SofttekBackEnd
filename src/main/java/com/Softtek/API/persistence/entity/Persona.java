@@ -14,6 +14,17 @@ public class Persona {
     private Integer dni;
     private Boolean empleado;
 
+    public Persona(){
+    }
+
+    public Persona(Integer id, String nombre, String apellido, Integer dni, Boolean empleado) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.empleado = empleado;
+    }
+
     public Integer getId() {return id;}
     public void setId(Integer id) {
         this.id = id;
