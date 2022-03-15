@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/persona")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT})
 public class PersonController {
 
     @Autowired
